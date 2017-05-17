@@ -1,0 +1,55 @@
+.dynamic-table{
+  .dynamic-table-row{
+    .title, .down{
+      text-align: left;
+    }
+
+    .down .tag{
+      margin: 0;
+    }
+
+    .element{
+      &.clear-padding-right{
+        padding-right: 0;
+      }
+
+      // Notification picture placeholder
+      .picture-placeholder{
+        box-shadow: none;
+        margin-right: 0.5rem;
+
+        &.first-notification{
+          background: @system-success-color;
+        }
+
+        &.event{
+          background: @system-base-color;
+        }
+
+        &.supervisor{
+          background: @system-base-color;
+        }
+
+        &.success{
+          background: @system-success-color;
+        }
+
+        &.danger{
+          background: @system-danger-color;
+        }
+      }
+
+      // .achievement-badge{
+      //   .vertical-center(@dynamic-table-row-height; @achievement-badge-small-width*(17.0 / 15.0));
+      //   margin-left: 7px;
+      //   margin-right: 7px;
+      // }
+    }
+
+    .down{
+      i, span.text{
+        vertical-align: baseline;
+      }
+    }
+  }
+}

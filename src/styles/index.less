@@ -1,0 +1,134 @@
+@import "~font-awesome/less/font-awesome.less";
+
+@import "~weed/src/assets/less/variables";
+@import "~weed/src/assets/less/utilities/normalize.less";
+@import "~weed/src/assets/less/scaffolding";
+
+// Weed utilities
+
+// Easings
+@import "~weed/src/assets/less/utilities/easings.less";
+
+// Mixins
+@import "~weed/src/assets/less/utilities/mixins/center.less";
+@import "~weed/src/assets/less/utilities/mixins/clear.less";
+@import "~weed/src/assets/less/utilities/mixins/font_awesome.less";
+@import "~weed/src/assets/less/utilities/mixins/format_text.less";
+@import "~weed/src/assets/less/utilities/mixins/gradients.less";
+@import "~weed/src/assets/less/utilities/mixins/grid.less";
+@import "~weed/src/assets/less/utilities/mixins/misc.less";
+@import "~weed/src/assets/less/utilities/mixins/sizing.less";
+@import "~weed/src/assets/less/utilities/mixins/flex.less";
+
+// Classes
+@import "~weed/src/assets/less/utilities/classes/center.less";
+@import "~weed/src/assets/less/utilities/classes/clear.less";
+@import "~weed/src/assets/less/utilities/classes/expand.less";
+@import "~weed/src/assets/less/utilities/classes/float.less";
+@import "~weed/src/assets/less/utilities/classes/format_text.less";
+@import "~weed/src/assets/less/utilities/classes/misc.less";
+@import "~weed/src/assets/less/utilities/classes/show.less";
+
+// Weed components
+@import "~weed/src/assets/less/components/loader.less";
+@import "~weed/src/assets/less/components/grid.less";
+@import "~weed/src/assets/less/components/buttons.less";
+@import "~weed/src/assets/less/components/tags.less";
+@import "~weed/src/assets/less/components/accent.less";
+@import "~weed/src/assets/less/components/forms.less";
+@import "~weed/src/assets/less/components/user.less";
+@import "~weed/src/assets/less/components/dynamic_table.less";
+@import "~weed/src/assets/less/components/tabs.less";
+@import "~weed/src/assets/less/components/popup.less";
+
+// Weed extensions
+@import "weed_extensions/buttons.less";
+@import "weed_extensions/forms.less";
+@import "weed_extensions/tabs.less";
+@import "weed_extensions/dynamic_table.less";
+@import "weed_extensions/popup.less";
+
+// Font definitions
+@import "fonts/definitions.less";
+
+// Configuration
+@import "weed_config.less";
+@import "scaffolding.less";
+
+// Components
+@import "components/search.less";
+@import "components/navigation_bar.less";
+@import "components/sub_selector.less";
+@import "components/achievement_badges.less";
+
+// Views
+@import "views/scaffolding.less";
+@import "views/external.less";
+@import "views/find_your_school.less";
+@import "views/login.less";
+@import "views/password_recovery.less";
+
+@user-card-picture-placeholder:                             none;
+
+body{
+  padding: 1rem 1rem (16px + 16px + @form-input-height + 16px) 1rem;
+}
+
+.add-todo{
+  background: fadeout(white, 25%);
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+    
+.todo-list{
+  .clear-box();
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0 rgba(200, 200, 200, 0.3);
+  list-style: none;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.todo-item{
+  background: white;
+  border-bottom: 1px solid #eee;
+  color: @black-50;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 1rem;
+  transition: @faster;
+
+  &:last-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+  }
+
+  &:hover{
+    background: #f5f5f5;
+  }
+
+  &.completed{
+    background: lighten(lightgreen, 10%);
+    border-bottom: 1px solid lighten(lightgreen, 5%);
+    color: darken(lightgreen, 40%);
+  }
+
+  &.blocked{
+    cursor: auto;
+    opacity: 0.4;
+  }
+}
+
+.refetch-todos{
+  padding: 1rem 0;
+
+  .message{
+    color: #999;
+    font-family: @montserrat;
+    margin-right: 0.5rem;
+  }
+}

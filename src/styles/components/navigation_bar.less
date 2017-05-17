@@ -1,0 +1,93 @@
+@navbar-height:                                             65px;
+@navbar-logo-height:                                        31px;
+
+.navbar{
+  background: @system-base-color;
+  box-sizing: border-box;
+  color: white;
+  height: @navbar-height;
+  left: 0;
+  padding: 0 0 0 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  &.transparent{
+    background: none;
+  }
+
+  &.with-left-component{
+    padding-left: 3rem;
+  }
+
+  &.with-right-component{
+    padding-right: 3rem;
+  }
+
+  .navigation-link{
+    // .empty-fill();
+    height: @navbar-height;
+    line-height: @navbar-height;
+    width: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+
+    &.no-distract{
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &.opaque{
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .user{
+    .vertical-center(@navbar-height; @user-picture-size;);
+    display: block;
+    padding: 0 1rem;
+
+    .picture{
+      box-shadow: 0 0 0 2px fadeout(darken(@navbar-color, 5%), 30%);
+    }
+  }
+}
+
+.navbar-logo{
+  .vertical-center(@navbar-height; @navbar-logo-height;);
+  height: @navbar-logo-height;
+  width: auto;
+}
+ 
+.navigation-back-component{
+  color: inherit;
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  left: 0;
+  line-height: @navbar-height;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 3rem;
+}
+
+.navigation-cancel-component{
+  color: inherit;
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  line-height: @navbar-height;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 3rem;
+}
+
+.navigation-title-component{
+  color: inherit;
+  font-size: 1.5rem;
+  line-height: @navbar-height;
+  text-align: center;
+}

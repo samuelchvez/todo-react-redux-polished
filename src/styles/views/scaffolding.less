@@ -1,0 +1,25 @@
+.view{
+  background: center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  &.with-navbar{
+    .grid.frame{
+      padding-top: @navbar-height;
+    }
+  }
+
+  &.with-sub-selector{
+    .grid.frame{
+      padding-top: @navbar-height + @subselector-height;
+    }
+  }
+
+  .viewport{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}

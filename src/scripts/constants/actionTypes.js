@@ -1,0 +1,6 @@
+export const ADD_TODO = 'ADD_TODO';
+export const CONFIRM_TODO = 'CONFIRM_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const FETCH_TODOS_START = 'FETCH_TODOS_START';
+export const FETCH_TODOS_SUCCESS = 'FETCH_TODOS_SUCCESS';
+export const FETCH_TODOS_ERROR = 'FETCH_TODOS_ERROR';

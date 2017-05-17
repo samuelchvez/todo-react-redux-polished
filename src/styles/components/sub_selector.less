@@ -1,0 +1,50 @@
+@subselector-height:                                        @navbar-height + 10px;
+
+.subselector{
+  background: #008682;
+  box-sizing: border-box;
+  height: @subselector-height;
+  left: 0;
+  padding: 0 1rem;
+  position: absolute;
+  top: @navbar-height;
+  width: 100%;
+  z-index: 2;
+
+  &:before{
+    content: "\A0";
+  }
+
+  &:before{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .user{
+    img.picture{
+      .circle(40px);
+      border-color: #008682;
+    }
+
+    .data{
+      color: #d3fffe;
+    }
+  }
+
+  .selector{
+    display: inline-block;
+    height: 100%;
+    line-height: @subselector-height;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    vertical-align: middle;
+    width: 45px;
+
+    i{
+      color: #2bb4b0;
+    }
+  }
+}
